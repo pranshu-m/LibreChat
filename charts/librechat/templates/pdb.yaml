@@ -1,0 +1,13 @@
+{{- if .Values.podDisruptionBudget -}}
+apiVersion: policy/v1{{ ternary "" "beta1" ($.Capabilities.APIVersions.Has "policy/v1/PodDisruptionBudget") }}
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "librechat.fullname" . }}
+  labels:
+    {{- include "librechat.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "librechat.selectorLabels" . | nindent 6 }}
+{{ toYaml .Values.podDisruptionBudget | indent 2 }}
+{{- end }}
