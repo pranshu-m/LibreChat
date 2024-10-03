@@ -5,6 +5,7 @@ on:
   push:
     tags:
       - "*"
+  workflow_dispatch: # added temporarily to test helm chart releases
 
 jobs:
   release:

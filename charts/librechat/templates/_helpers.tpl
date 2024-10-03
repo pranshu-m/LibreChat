@@ -67,7 +67,7 @@ Print string from list split by ,
 {{- define "model.list" -}}
 {{- range $idx, $val := $.Values.configEndpoint.models -}}
 {{- if $idx }}
-{{- print ", "  -}} 
+{{- print ", " -}}
 {{- end -}}
 {{- $val -}}
 {{- end -}}

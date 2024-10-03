@@ -81,7 +81,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-  
+
 config:
   envSecrets:
     # Use this when using one k8s secret for multiply env secrets
@@ -109,4 +109,4 @@ config:
     DOMAIN_CLIENT: ""
     DOMAIN_SERVER: ""
     ENDPOINTS: "openAI,azureOpenAI,bingAI,chatGPTBrowser,google,gptPlugins,anthropic"
-    SEARCH: false 
+    SEARCH: false
